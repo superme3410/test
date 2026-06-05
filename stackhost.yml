@@ -2,14 +2,15 @@ user:
   name: superhai
   github: superme3410
 
-language: "nodejs"
+runtime: nodejs
+node_version: "20"
 
 commands:
   build:
     - "npm install"
 
   start:
-    - "npm start"
+    - "node index.js"
 
 env:
   - "NODE_ENV=production"
