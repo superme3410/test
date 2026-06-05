@@ -9,7 +9,7 @@ commands:
     - "npm install"
 
   start:
-    - "node index.js"
+    - "npm start"
 
 env:
   - "NODE_ENV=production"
