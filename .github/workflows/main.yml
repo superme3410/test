@@ -1,6 +1,8 @@
-name: Keep StackHost Alive
+name: Keep Alive
 
 on:
+  workflow_dispatch:
+
   schedule:
     - cron: "*/10 * * * *"
 
@@ -9,10 +11,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping
-        run: |
-          curl \
-            --retry 3 \
-            --retry-delay 5 \
-            --connect-timeout 10 \
-            https://6f7db3ufp7egvrin-free-app.stackhost.org/
+      - run: curl https://6f7db3ufp7egvrin-free-app.stackhost.org
