@@ -1,0 +1,21 @@
+user:
+  name: superhai
+  github: superme3410
+
+runtime:
+  image: node:22
+
+commands:
+  package: ""
+
+  build:
+    - npm install
+
+  start: "npm start"
+
+repository:
+  branch: main
+  auto_deploy: true
+
+env:
+  - NODE_ENV:production
