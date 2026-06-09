@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Ping
         run: |
-          curl -k -L -s -o /dev/null -w "%{http_code}\n" curl https://6f7db3ufp7egvrin-free-app.stackhost.org
+          curl -k -L -s -o /dev/null -w "%{http_code}\n" https://6f7db3ufp7egvrin-free-app.stackhost.org
