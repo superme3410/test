@@ -1,0 +1,18 @@
+name: Keep StackHost Alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping
+        run: |
+          curl \
+            --retry 3 \
+            --retry-delay 5 \
+            --connect-timeout 10 \
+            https://6f7db3ufp7egvrin-free-app.stackhost.org/
