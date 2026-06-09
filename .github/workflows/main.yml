@@ -11,4 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: curl https://6f7db3ufp7egvrin-free-app.stackhost.org
+      - name: Ping
+        run: |
+          curl -k -L -s -o /dev/null -w "%{http_code}\n" curl https://6f7db3ufp7egvrin-free-app.stackhost.org
